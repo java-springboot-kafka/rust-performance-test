@@ -1,12 +1,15 @@
+// .devcontainer/devcontainer.json
 {
   "name": "Rust Development",
   "image": "rust:latest",
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
-  },  
+  },
+  "extensions": ["matklad.rust-analyzer"],
+  "forwardPorts": [8080],
   "postCreateCommand": "cargo init",
   "mounts": [
-    {"source": ".", "target": "/workspace", "type": "bind"}
+    {"source": "${localWorkspaceFolder}", "target": "/workspace", "type": "bind"}
   ],
   "workspaceFolder": "/workspace"
 }
