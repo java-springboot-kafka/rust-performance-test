@@ -1,5 +1,14 @@
 {
-  "image": "hcr.io/devcontainers/features/rust:1",
-  "features": {
-  }
+  "name": "Rust Development",
+  "image": "rust:latest",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": ["matklad.rust-analyzer"],
+  "forwardPorts": [8080],
+  "postCreateCommand": "cargo init",
+  "mounts": [
+    {"source": ".", "target": "/workspace", "type": "bind"}
+  ],
+  "workspaceFolder": "/workspace"
 }
