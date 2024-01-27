@@ -9,7 +9,7 @@
   "forwardPorts": [8080],
   "postCreateCommand": "cargo init",
   "mounts": [
-    {"source": "${localWorkspaceFolder}", "target": "/workspace", "type": "bind"}
+    {"source": "${localWorkspaceFolder}", "target": "/workspace"}
   ],
   "workspaceFolder": "/workspace"
 }
